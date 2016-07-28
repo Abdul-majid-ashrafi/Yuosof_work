@@ -1,0 +1,25 @@
+<ion-menu [content]="content">
+
+
+  <ion-content  class="menu">
+    <ion-grid class="padZero">
+      <ion-row class="menuRow" *ngIf="CurrentUser">
+        <ion-col offset-50 >
+          <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQpGwvMEK6GVlJKqEpEc9zpjzvrIrlS3fuF6LjDLrzaCvPQiGj_" alt="" class="menuImg">
+           <h2>{{CurrentUser.firstName}} {{CurrentUser.lastName}} </h2>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!--<ion-list>-->
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+         <ion-icon name="person"></ion-icon>
+ {{p.title}}
+      </button>
+    <!--</ion-list>-->
+  </ion-content>
+
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>

@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Edit Profile</ion-title>
+        <ion-buttons end>
+            <button dark clear (click)="close()">Close</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item-group *ngIf="user">
+        <ion-item-divider secondary>Personal Info</ion-item-divider>
+        <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Email</ion-label>
+            <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <img [src]="userImage || 'img/pic.jpg' " alt="" class="border">
+                </ion-col>
+                <ion-col>
+                    <button secondary (click)="uploadPicture()">Upload</button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                </ion-col>
+                <ion-col>
+                    <button secondary (click)="updateProfile()">Update</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item-group>
+</ion-content>

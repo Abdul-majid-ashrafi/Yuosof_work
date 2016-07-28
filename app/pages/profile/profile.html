@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar danger>
+        <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Profile</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="profile">
+      
+      <ion-row class="menuRow"  offset-50>
+        <ion-col offset-50>
+        </ion-col>
+      </ion-row>
+    
+    
+    <form>
+        <ion-list>
+        <ion-item class="login_input">
+            <ion-label fixed class="color_black">{{user.firstName}} </ion-label>
+            <ion-input type="text"  [(ngModel)]="user.firstName"></ion-input>         
+        </ion-item>
+        
+        <ion-item class="login_input">
+            <ion-label fixed class="color_black">{{user.lastName}}</ion-label>
+            <ion-input type="text"  [(ngModel)]="user.lastName"></ion-input>         
+        </ion-item>
+        
+        <ion-item class="login_input">
+            <!--<ion-label fixed class="color_black">{{user.email}}</ion-label>-->
+            <ion-input type="text"   disabled placeholder="{{user.email}} "></ion-input>         
+        </ion-item>
+        
+              <ion-item class="login_input">
+            <ion-label fixed class="color_black">Phone Number</ion-label>
+            <ion-input type="number"  [(ngModel)]="user.number"></ion-input>         
+        </ion-item>
+        
+    <ion-item>
+           <ion-label fixed class="color_black">Address</ion-label>
+      <ion-textarea id="report_textArea"  [(ngModel)]="user.address"></ion-textarea>
+    </ion-item>
+
+<button block (click)="Update()" class="btn">Submit </button>
+        </ion-list>
+    </form>
+    
+        
+
+   
+</ion-content>

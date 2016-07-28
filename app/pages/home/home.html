@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar danger>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding class="getting-started">
+
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label fixed>Username</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="user.status"></ion-input>
+      </ion-item>
+    </ion-card-content>
+
+    <button danger clear (click)="captureImage()">camera</button>
+
+    <button danger (click)="addPost()">Submit</button>
+  </ion-card>
+
+
+
+<ion-card *ngFor="let post of getPost">
+  <ion-card-header>
+    <img [src]="post.image" alt="">
+  </ion-card-header>
+  <ion-card-content>
+    {{post.status}}<br/>
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>

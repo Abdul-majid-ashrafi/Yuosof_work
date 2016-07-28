@@ -1,0 +1,36 @@
+<ion-content>
+    <!--<ion-grid>
+        <ion-row>
+            <ion-col offset-20>
+                <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" class="logoImg" alt="">
+                <h3>Welcome To Egypt</h3>
+            </ion-col>
+        </ion-row>
+    </ion-grid>-->
+
+
+
+
+      <h2 class="Logo">   <ion-icon name="logo-android"></ion-icon> Logo</h2>
+    
+    
+    <ion-list>
+  <ion-item>
+    <ion-label fixed>Email</ion-label>
+    <ion-input type="email" value="" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>Password</ion-label>
+    <ion-input type="password"  [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <br/> <br/>
+<button block class="btn" (click)="login(user)">Login</button>
+</ion-list>
+    
+       <div style="text-align: center;">
+     <p style="font-size: 18px;margin:30px ; color: #898f93">Don't' have an account?</p>
+        <a (click)="createAcc()" style="color: #ef473a;">Create Account</a></div>
+
+<!--<button  class="light" clear>Create Account</button>-->
+
+</ion-content>

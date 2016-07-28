@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar danger>
+        <ion-title>Registration</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="signup">
+
+          <h2 class="Logo">   <ion-icon name="logo-android"></ion-icon> Logo</h2>
+
+    
+    <form>
+        <ion-list>
+        <ion-item class="login_input">
+            <ion-label fixed class="color_black">First Name</ion-label>
+            <ion-input type="text"  [(ngModel)]="user.firstName"></ion-input>         
+        </ion-item>
+        
+        <ion-item class="login_input">
+            <ion-label fixed class="color_black">Last Name</ion-label>
+            <ion-input type="text"  [(ngModel)]="user.lastName"></ion-input>         
+        </ion-item>
+        
+        <ion-item class="login_input">
+            <ion-label fixed class="color_black">Email</ion-label>
+            <ion-input type="text"  [(ngModel)]="user.email"></ion-input>         
+        </ion-item>
+        
+        <ion-item class="login_input">
+            <ion-label fixed class="color_black">Password</ion-label>
+            <ion-input type="password"  [(ngModel)]="user.password"></ion-input>         
+        </ion-item>
+        <button block (click)="Signup()" class="btn">Submit </button>
+
+        </ion-list>
+    </form>
+
+<div style="text-align: center;">
+     <p style="font-size: 18px;margin:30px ; color: #898f93">Already have an account?</p>
+        <a (click)="createAcc()" style="color: #ef473a;">Login</a></div>
+</ion-content>
